@@ -1,0 +1,88 @@
+\chapter{Miscellaneous activity}
+
+\section{My semester expense}
+I want to prepare my semester expense falling mainly into below categories:-
+\\
+
+\textbf{Semester fee} This include my tution fee
+
+\textbf{Mess expense} My mess fee.
+
+\textbf{Stationary} My stationary requirement
+
+\textbf{Transportation} Mainly include my home trip
+
+\textbf{Entertainment} Very less, because I am student of IIT Bombay
+
+\textbf{Miscellaneous} Other important things
+\\
+
+Below table describe my expanse:-
+
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{|p{4cm}|p{4cm}|}
+      \hline
+      \multicolumn{2}{|c|}{Per semester Expanse}\\
+      \hline
+      Expanse due to & Amount\\
+	  \hline      
+	  Semester fee & 18000\\
+	  Mess expense & 20000\\
+	  Stationary & 7000\\
+	  Transportation & 9000\\
+	  Entertainment & 5000\\
+	  Miscellaneous & 4000\\
+	\hline    
+    \end{tabular}
+    \caption{My semester expanse}
+  \end{center}
+\end{table}
+
+\section{My favorite recipe}
+I like to learn new cooking item. I went through recipe of preparing stuff for aloo
+paratha. Below is the recipe.
+
+\tikzstyle{startstop} = [ellipse, text centered, draw=black, fill=red!20]
+\tikzstyle{process} = [rectangle, rounded corners, text width=2cm,text centered, draw=black, fill=blue!20]
+\tikzstyle{decision} = [diamond, text centered, text width=2cm, draw=black, fill=blue!20]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\begin{figure}[h!]
+\begin{center}
+\begin{tikzpicture}[node distance=2cm]
+\node (start) [startstop] {Start};
+\node (pro1) [process, below of=start] {Boil potato in pressure cooker};
+\node (pro2) [process, below of=pro1, yshift=-1cm] {Mash The potato nicely};
+\node (pro3) [process, left of=pro2, xshift=-1.5cm] {Add little water};
+\node (dec) [decision, below of=pro2, yshift=-1.5cm] {Has the mash softend};
+\node (pro4) [process, right of=dec, xshift=3cm] {Mix with the other spices};
+\node (pro5) [process, below of=dec, yshift=-2cm] {Stuff is ready for preparing Aloo Paratha};
+\node (end) [startstop, below of=pro5, yshift=-0.5cm] {End};
+\draw [arrow] (start) -- (pro1);
+\draw [arrow] (pro1) -- (pro2);
+\draw [arrow] (pro2) -- (dec);
+\draw [arrow] (pro3) -- (pro2);
+\draw [arrow] (dec) -| node[anchor=east] {No} (pro3);
+\draw [arrow] (dec) -- node[anchor=south] {Yes} (pro4);
+\draw [arrow] (pro4) |- (pro5);
+\draw [arrow] (pro5) -- (end);
+\end{tikzpicture}
+\end{center}
+\caption{Stuff preparation of Aloo Paratha}
+\end{figure}
+
+\section{Some important research ideas.}
+Paper\cite{arxivPreprint} describes how word embedding helps in sarcasm detection by augmenting
+the word embedding-based features to the sets of features of sarcasm. Similarity score
+values returned by word embeddings, are of two categories:- similarity-based (where we consider maximum/minimum similarity score of most similar/dissimilar word pair
+respectively), and weighted similarity-based (where we weight the maximum/minimum
+similarity scores of most similar/dissimilar word pairs with the linear distance between
+the two words in the sentence).
+
+Paper\cite{acmSurvey} is a compilation of past work in automatic sarcasm detection. The three
+milestones observed in the research so far: semi-supervised pattern extraction to iden-
+tify implicit sentiment, use of hashtag-based supervision, and incorporation of context
+beyond target text.
+

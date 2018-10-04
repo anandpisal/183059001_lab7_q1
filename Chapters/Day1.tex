@@ -1,0 +1,50 @@
+\chapter{My classroom learning}
+Dear Diary,
+
+It was a wonderful experience for me to lot important things in the class. I would like
+to share some the important things.
+
+\section{Math class}
+The equation of Latent Dirichlet allocation is very helpful in natural language processing
+for modelling a generative statistical model. The equation of the model is shown below
+:-
+
+\begin{equation}
+p(\beta ,\theta ,z,w|\alpha ,\eta )=\prod_{i=1}^{K}p(\beta _{i}|\eta )\prod_{d=1}^{D}p(\theta _{d},\alpha )(\prod_{n=1}^{N}p(z_{d,n}|\theta _{d})p(w_{d,n}|\beta _{1:K},z_{d,n}))
+\end{equation}
+
+Also the formula of cumulative distribution function in case of uniform probability measure is :-
+
+\begin{equation}
+F(x)=\begin{cases}
+0, & \text{ if } x<a \\ 
+\frac{x-a}{b-a}, & \text{ if } a\leq x\leq b \\ 
+1, & \text{ if } x>b 
+\end{cases}
+\end{equation}
+
+\section{Counting sort}
+Counting sort is one of the nice algorithm which is not comparison based sorting. Below
+is the counting sort algorithm :-
+
+\begin{algorithm}
+    \caption{Counting Sort}
+    \begin{algorithmic}[1] % The number tells where the line numbering should start
+        \Procedure{Counting-Sort}{$A,B,k$} 
+        	\State Let C[0,...,k] be a new array
+            \For{i=0\ to\ k :} 
+                \State $C[i] = 0$ \Comment{Initialization step}
+            \EndFor
+            \For{j=1 to A.length or n :} 
+                \State $C[A[j]] = C[A[j]] + 1$ \Comment{Maintaining count}
+            \EndFor
+            \For{i=1 to k:} 
+                \State $C[i] = C[i] + C[i − 1]$
+            \EndFor
+            \For{j=n or A.length down to 1:} 
+                \State $B[C[A[j]]] = A[j]$
+				\State $C[A[j]] = C[A[j]] − 1$
+            \EndFor
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
